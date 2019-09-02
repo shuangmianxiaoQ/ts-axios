@@ -21,8 +21,8 @@ app.use(
 
 app.use(webpackHotMiddleware(compiler));
 
-// 设置静态资源目录
-app.use(express.static(__dirname + '/public'));
+// 设置静态资源目录为当前文件所在目录
+app.use(express.static(__dirname));
 
 // 解析请求 body
 app.use(bodyParser.json());
