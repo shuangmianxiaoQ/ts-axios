@@ -7,4 +7,8 @@ router.get('/simple/get', (req, res) => {
   });
 });
 
+router.get('/base/get', (req, res) => {
+  res.json(req.query);
+});
+
 module.exports = router;
