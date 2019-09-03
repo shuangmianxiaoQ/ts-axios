@@ -1,5 +1,6 @@
 import axios from '../../src';
 
+// 请求 URL: `/base/get?a=1&b=2`
 axios({
   method: 'get',
   url: '/base/get',
@@ -9,7 +10,7 @@ axios({
   }
 });
 
-// 参数值为数组
+// 参数值为数组，请求 URL: `/base/get?foo[]=bar&foo[]=baz`
 axios({
   method: 'get',
   url: '/base/get',
@@ -18,7 +19,7 @@ axios({
   }
 });
 
-// 参数值为对象
+// 参数值为对象，请求 URL: `/base/get?foo=%7B%22bar%22:%22baz%22%7D`
 axios({
   method: 'get',
   url: '/base/get',
@@ -29,7 +30,7 @@ axios({
   }
 });
 
-// 参数值为 Date 类型
+// 参数值为 Date 类型，请求 URL: `/base/get?date=2019-09-03T01:55:23.415Z`
 axios({
   method: 'get',
   url: '/base/get',
@@ -38,7 +39,7 @@ axios({
   }
 });
 
-// 特殊字符支持
+// 特殊字符支持，请求 URL: `/base/get?foo=@:$+`
 axios({
   method: 'get',
   url: '/base/get',
@@ -47,7 +48,7 @@ axios({
   }
 });
 
-// 空值忽略
+// 空值忽略，请求 URL: `/base/get?foo=bar`
 axios({
   method: 'get',
   url: '/base/get',
@@ -57,7 +58,7 @@ axios({
   }
 });
 
-// 丢弃 url 中的哈希标记
+// 丢弃 url 中的哈希标记，请求 URL: `/base/get?foo=bar`
 axios({
   method: 'get',
   url: '/base/get#hash',
@@ -66,7 +67,7 @@ axios({
   }
 });
 
-// 保留 url 中已存在的参数
+// 保留 url 中已存在的参数请求 URL: `/base/get?foo=bar&bar=baz`
 axios({
   method: 'get',
   url: '/base/get?foo=bar',

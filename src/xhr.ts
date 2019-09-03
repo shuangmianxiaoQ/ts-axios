@@ -1,5 +1,8 @@
 import { AxiosRequestConfig } from './types';
 
+/**
+ * 原生 xhr 封装
+ */
 const xhr = (config: AxiosRequestConfig): void => {
   const { url, method = 'get', data = null } = config;
 
