@@ -1,4 +1,4 @@
-import { isDate, isObject } from './utils';
+import { isDate, isPlainObject } from './utils';
 
 /**
  * 对于部分特殊字符 `@`, `:`, `$`, `,`, ` `, `[`, `]` 不进行 encode 处理
@@ -44,7 +44,7 @@ const handleUrl = (url: string, params?: any): string => {
         val = val.toISOString();
       }
 
-      if (isObject(val)) {
+      if (isPlainObject(val)) {
         val = JSON.stringify(val);
       }
 
