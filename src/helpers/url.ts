@@ -14,7 +14,7 @@ const encode = (val: string): string =>
     .replace(/%5D/gi, ']');
 
 /**
- * 处理请求参数，拼接返回请求时的 URL
+ * 处理请求参数的 URL，拼接返回请求时的 URL
  */
 const handleUrl = (url: string, params?: any): string => {
   if (!params) {
